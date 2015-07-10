@@ -1,0 +1,97 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="e2l_login_box" align="center">
+      <table border="0" align="center">
+      <tr><td>
+           <div align="center">
+           <img src="../EARNtoLEARN_LOGIN_files/LOGO_login_page.png" alt="Earn2Learn"> 
+           </div>
+      </td></tr>
+      <tr><td>
+      <form action="index.php" method="post" name="login" id="login">
+        <table border="0" align="center">
+        <tr>
+          <td width="80%">
+            <table align="center" class="loginform">
+              <tr class="username"> 
+                <td align="right" class="c0">
+                  <?php print_string("username") ?>:
+                </td>
+                <td class="c1">
+                  <input type="text" name="username" size="15" value="<?php p($frm->username) ?>" alt="<?php print_string("username") ?>" /> 
+                </td>
+              </tr>
+              <tr class="password"> 
+                <td align="right" class="c0">
+                  <?php print_string("password") ?>:
+                </td>
+                <td class="c1">
+                  <input type="password" name="password" size="15" value="" alt="<?php print_string("password") ?>" />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="20%">
+            <input type="submit" value="<?php print_string("login") ?>" />
+          </td>
+        </tr>
+        </table>
+      </form>
+
+
+<?php if (!empty($CFG->{'auth_'.$CFG->auth.'_stdchangepassword'})
+          || $CFG->changepassword 
+	  || is_internal_auth() ) {
+	  if (is_internal_auth() || !empty($CFG->{'auth_'.$CFG->auth.'_stdchangepassword'})) {
+              $changepassword = "forgot_password.php";
+              $changebuttonname = get_string("senddetails");
+          } else {
+              $changepassword = $CFG->changepassword;
+              $changebuttonname = get_string("passwordrecovery");
+          }
+?>
+      <hr width="80%" />
+      <p align="center"><?php print_string("forgotten") ?></p> 
+        <form action="<?php p($changepassword) ?>" method="get" name="changepassword">
+          <div align="center">
+          <input type="submit" value="<?php p($changebuttonname) ?>" />
+          </div>
+        </form>
+      <p align="center">Sign Up For A New Account:</p>
+        <form action="signup.php" method="get" name="signup">
+            <div align="center">
+            <input type="submit" value="<?php print_string("startsignup") ?>" />
+            </div>
+        </form>
+
+<?php } ?>
+
+    </td>
+
+</table>
+</td></tr>
+</table>
+</div>
+</body>
+</html>
+<style>
+    body{
+        background-color: #006699;
+	color: white;
+    }
+
+    .e2l_login_box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+	color: white;
+        size: 12;
+        font-family: 'Roboto', sans-serif;
+
+    }
+</style>

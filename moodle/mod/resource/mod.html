@@ -1,0 +1,13 @@
+<?php // $Id: mod.html,v 1.11 2004/07/28 06:56:58 moodler Exp $
+      // This script prints the setup screen for any resource
+      // It does this by calling the setup method in the appropriate class
+
+require_once("$CFG->dirroot/mod/resource/lib.php");
+require_once("$CFG->dirroot/mod/resource/type/$form->type/resource.class.php");
+
+$resourceclass = "resource_$form->type";
+$resource = new $resourceclass();
+
+$resource->setup($form);
+
+?>

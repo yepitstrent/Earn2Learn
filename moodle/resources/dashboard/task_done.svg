@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+]>
+<svg version="1.1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="200px" height="86px" viewBox="0 0 200 86" enable-background="new 0 0 200 86" xml:space="preserve">
+<g id="Layer_1" display="none">
+	<g display="inline">
+		<path fill="#F06668" d="M200.036,64.465c0,12.395-10.05,22.441-22.443,22.441H22.442C10.048,86.906,0,76.859,0,64.465V22.443
+			C0,10.049,10.048,0,22.442,0h155.15c12.394,0,22.443,10.049,22.443,22.443V64.465z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 49.708 57.6855)" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="40.3971">STOP</text>
+		</g>
+	</g>
+</g>
+<g id="Layer_2">
+	<g>
+		<path fill="#46C7F4" d="M200.036,64.465c0,12.393-10.048,22.441-22.44,22.441H22.445C10.05,86.906,0,76.857,0,64.465V22.441
+			C0,10.047,10.05,0,22.445,0h155.15c12.393,0,22.44,10.047,22.44,22.441V64.465z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 47.4502 57.6855)" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="40.3971">DONE</text>
+		</g>
+	</g>
+</g>
+<g id="Layer_3" display="none">
+	<g display="inline">
+		<path fill="#51B748" d="M200.035,64.465c0,12.395-10.049,22.441-22.443,22.441H22.442C10.048,86.906,0,76.859,0,64.465V22.443
+			C0,10.049,10.048,0,22.442,0h155.149c12.395,0,22.443,10.049,22.443,22.443V64.465z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 38.1201 57.6855)" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="40.3971">START</text>
+		</g>
+	</g>
+</g>
+<g id="Layer_4" display="none">
+	<g display="inline">
+		<path fill="#CDCCCB" d="M200.036,64.465c0,12.393-10.048,22.441-22.44,22.441H22.445C10.05,86.906,0,76.857,0,64.465V22.441
+			C0,10.047,10.05,0,22.445,0h155.15c12.393,0,22.44,10.047,22.44,22.441V64.465z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 47.4502 57.6855)" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="40.3971">DONE</text>
+		</g>
+	</g>
+</g>
+<g id="Layer_5" display="none">
+	<g display="inline">
+		<path fill="#51B748" d="M200.036,64.465c0,12.395-10.05,22.441-22.442,22.441H22.443C10.049,86.906,0,76.859,0,64.465V22.443
+			C0,10.049,10.049,0,22.443,0h155.15c12.393,0,22.442,10.049,22.442,22.443V64.465z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 18.1548 57.6855)" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="34">CONTINUE</text>
+		</g>
+	</g>
+</g>
+<g id="Layer_6" display="none">
+	<g display="inline">
+		<path fill="#46C7F4" d="M200.036,64.465c0,12.393-10.048,22.441-22.44,22.441H22.445C10.051,86.906,0,76.857,0,64.465V22.441
+			C0,10.047,10.051,0,22.445,0h155.15c12.393,0,22.44,10.047,22.44,22.441V64.465z"/>
+		<g>
+			<text transform="matrix(1 0 0 1 47.4507 57.6855)" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="40.3971">DONE</text>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,43 @@
+<?php
+    if (!isset($config->auth_nntphost)) {
+        $config->auth_nntphost = "127.0.0.1";
+    }
+    if (!isset($config->auth_nntpport)) {
+        $config->auth_nntpport = "119";
+    }
+?>
+
+<tr valign="top" class="required">
+    <td align="right">auth_nntphost:</td>
+    <td>
+        <input name="auth_nntphost" type="text" size="30" value="<?php echo $config->auth_nntphost?>" />
+    <?php  if (isset($err["auth_nntphost"]))  formerr($err["auth_nntphost"]); ?>
+    </td>
+    <td>
+    <?php  print_string("auth_nntphost","auth") ?>
+    <?php  print_string("auth_multiplehosts","auth") ?>
+    </td>
+</tr>
+
+<tr valign="top" class="required">
+    <td align="right">auth_nntpport:</td>
+    <td>
+    <input name="auth_nntpport" type="text" size="6" value="<?php echo $config->auth_nntpport?>" />
+    <?php  if (isset($err["auth_nntpport"])) formerr($err["auth_nntpport"]); ?>
+    </td>
+    <td>
+    <?php  print_string("auth_nntpport","auth") ?>
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right"><?php  print_string("instructions", "auth") ?>:</td>
+    <td>
+    <textarea name="auth_instructions" cols="30" rows="10" wrap="virtual"><?php  p($config->auth_instructions) ?></textarea> 
+    </td>
+    <td>
+    <?php  print_string("authinstructions","auth") ?>
+    <?php  helpbutton("text", get_string("helptext")) ?>
+    </td>
+</tr>
+<?php print_auth_lock_options($auth, $user_fields, get_string('auth_fieldlocks_help', 'auth'), false, false); ?>

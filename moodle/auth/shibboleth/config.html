@@ -1,0 +1,58 @@
+<?php
+    // Set default values
+    $pluginconfig   = get_config('auth/shibboleth');
+
+    if (!isset($config->auth_instructions) or empty($pluginconfig->shib_user_attribute)) {
+        $config->auth_instructions = get_string('auth_shib_instructions', 'auth', $CFG->wwwroot.'/auth/shibboleth/shib-protected.php');
+    }
+
+    if (!isset ($pluginconfig->user_attribute)) {
+        $pluginconfig->user_attribute = '';
+    }
+    if (!isset ($pluginconfig->convert_data)) {
+        $pluginconfig->convert_data = '';
+    }
+?>
+<tr>
+    <td colspan="3" align="left">
+      <p>
+        <?php  print_string("auth_shib_username_description", "auth") ?>
+      </p>
+    </td>
+</tr>
+<tr valign="top" class="required">
+    <td align="right"><?php  print_string("username") ?>:</td>
+    <td>
+    <input name="pluginconfig_shib_user_attribute" type="text" size="30" value="<?php echo $pluginconfig->shib_user_attribute ?>">
+    </td>
+    <td></td>
+    </td>
+</tr>
+
+<?php print_auth_lock_options($auth, $user_fields, '<!-- empty help -->', true, false);  ?>
+
+<tr valign="top">
+    <td align="right"><?php  print_string("instructions", "auth") ?>:</td>
+    <td>
+    <textarea name="auth_instructions" cols="30" rows="10" wrap="virtual"><?php  p($config->auth_instructions) ?></textarea> 
+    </td>
+    <td>
+    <?php  print_string("auth_shib_instructions_help","auth", htmlspecialchars($CFG->wwwroot.'/auth/shibboleth')) ?>
+    <?php  helpbutton("text", get_string("helptext")) ?>
+    </td>
+</tr>
+<tr valign="top">
+    <td align="right"><?php  print_string("auth_shib_convert_data", "auth") ?>:</td>
+    <td>
+    <input name="pluginconfig_convert_data" type="text" size="30" value="<?php echo $pluginconfig->convert_data?>"> 
+    <?php 
+          if ($pluginconfig->convert_data && $pluginconfig->convert_data != '' && !is_readable($pluginconfig->convert_data)){
+              echo '<br><font color="red">';
+              print_string("auth_shib_convert_data_warning", "auth");
+              echo '</font>';
+          }
+    ?>
+    </td>
+    <td><?php  print_string("auth_shib_convert_data_description", "auth") ?></td>
+    </td>
+</tr>

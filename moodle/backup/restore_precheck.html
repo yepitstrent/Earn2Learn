@@ -1,0 +1,43 @@
+<?php  // $Id: restore_precheck.html,v 1.16 2005/01/27 02:35:10 mjollnir_ Exp $
+    //This page copies th zip to the temp directory,
+    //unzip it, check that it is a valid backup file
+    //inform about its contents and fill all the necesary
+    //variables to continue with the restore.
+
+    //Checks we have the file variable
+    if (!isset($file)) {         
+        error ("File not specified");
+    }
+
+    //Check login   
+    require_login();
+ 
+    //Check admin
+    if (!empty($id)) {
+        if (!isteacheredit($id)) {
+            if (empty($to)) {
+                error("You need to be a teacher or admin user to use this page.", "$CFG->wwwroot/login/index.php");
+            } else {
+                if (!isteacheredit($to)) {
+                    error("You need to be a teacher or admin user to use this page.", "$CFG->wwwroot/login/index.php");
+                }
+            }
+        }
+    } else {
+        if (!isadmin()) {
+            error("You need to be an admin user to use this page.", "$CFG->wwwroot/login/index.php");   
+        }
+    }
+
+    //Check site
+    if (!$site = get_site()) {
+        error("Site not found!");
+    }
+
+    $status = restore_precheck($id,$file,!empty($SESSION->restore->importing));
+ 
+    if (!$status) {
+        error("An error occured");
+    }
+
+?>

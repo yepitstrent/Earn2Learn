@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html<?php echo $direction ?>>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src= <?php echo '"'.$CFG->wwwroot.'/resources/charts/rendro/dist/easypiechart.js"'; ?> ></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <?php echo $meta ?>
+    <meta name="keywords" content="moodle, <?php echo $title ?> " />
+    <title><?php echo $title ?></title>
+    <link rel="shortcut icon" href="<?php echo $CFG->wwwroot.'/theme/'.current_theme() ?>/favicon.ico" />
+    <?php include("$CFG->javascript"); ?>
+</head>
+
+<body> 
+<?php if ($home) {  // This is what gets printed on the home page only  
+?>
+    <div id="e2l_header" style="background-color: #006699; width: 100%; padding:15px 0px; float:left;">
+        <div class="headermain" onclick="dashboard();"><img style="padding: 0px 35px; width: 275px;" src=<?php echo '"'.$CFG->wwwroot.'/resources/dashboard/logo.svg"'; ?> ></div>
+        <div class="headermenu" >
+	    <div>
+	        <div>
+	            <?php if (is_null($USER->loggedin) ) { ?> 
+		    <div><div id="uname"><a href= <?php echo '"'.$CFG->wwwroot.'/login/index.php"'; ?> ><div id="log_btn"><center><font color="#FFFFFF" >Log In</font></center></div></a></div>
+                    <?php } else { ?>
+		    <div><div id="uname" ><font color="#FFFFFF" ><?php echo $USER->username.": "; ?> &nbsp;</font></div><a href= <?php echo '"'.$CFG->wwwroot.'/login/logout.php"'; ?> ><div id="log_btn"><center><font color="#FFFFFF">Log Out</font></center></div></a></div>
+		    <?php } ?>	
+		</div>
+	    </div>
+
+	    <div id="hamburger" style="display: none;">
+	    <ul>
+	        <li onclick="alert();"><img src= <?php echo '"'.$CFG->wwwroot.'/resources/dashboard/hamburger.png"'; ?> >
+		    <ul>
+	                    <?php if (is_null($USER->loggedin) ) { ?>
+		            <li><a href= <?php echo '"'.$CFG->wwwroot.'/login/index.php"'; ?> ><font color="#FFFFFF" >Log In</font></a></li>
+			    <?php } else { ?>
+		            <li><a href= <?php echo '"'.$CFG->wwwroot.'/login/logout.php"'; ?> ><font color="#FFFFFF" >Log Out</font></a></li>
+                            <?php } ?>
+			    <li><a href= <?php echo '"'.$CFG->wwwroot.'/"'; ?> ><font color="#FFFFFF">Home</font></a></li>
+		    </ul>
+		</li>
+	    </ul><?php //echo $menu ?>
+	    </div>
+	</div>	
+    </div></div>
+<?php } else if ($heading) {  // This is what gets printed on any other page with a heading 
+?>
+    <div id="e2l_header" style="background-color: #006699; width: 100%; padding:15px 0px; float:left;">
+        <div class="headermain" onclick="dashboard();"><img style="padding: 0px 35px; width: 275px;" src=<?php echo '"'.$CFG->wwwroot.'/resources/dashboard/logo.svg"'; ?> ></div>
+        <div class="headermenu" >
+	    <div>
+	        <div>
+	            <?php if (is_null($USER->loggedin) ) { ?> 
+		    <div><div id="uname"><a href= <?php echo '"'.$CFG->wwwroot.'/login/index.php"'; ?> ><div id="log_btn"><center><font color="#FFFFFF" >Log In</font></center></div></a></div>
+                    <?php } else { ?>
+		    <div><div id="uname" ><font color="#FFFFFF" ><?php echo $USER->username.": "; ?> &nbsp;</font></div><a href= <?php echo '"'.$CFG->wwwroot.'/login/logout.php"'; ?> ><div id="log_btn"><center><font color="#FFFFFF">Log Out</font></center></div></a></div>
+		    <?php } ?>	
+		</div>
+	    </div>
+
+	    <div id="hamburger" style="display: none;">
+	    <ul>
+	        <li onclick="alert();"><img src= <?php echo '"'.$CFG->wwwroot.'/resources/dashboard/hamburger.png"'; ?> >
+		    <ul>
+	                    <?php if (is_null($USER->loggedin) ) { ?>
+		            <li><a href= <?php echo '"'.$CFG->wwwroot.'/login/index.php"'; ?> ><font color="#FFFFFF" >Log In</font></a></li>
+			    <?php } else { ?>
+		            <li><a href= <?php echo '"'.$CFG->wwwroot.'/login/logout.php"'; ?> ><font color="#FFFFFF" >Log Out</font></a></li>
+                            <?php } ?>
+			    <li><a href= <?php echo '"'.$CFG->wwwroot.'/"'; ?> ><font color="#FFFFFF">Home</font></a></li>
+		    </ul>
+		</li>
+	    </ul><?php //echo $menu ?>
+	    </div>
+	</div>	
+    </div>
+<?php } ?>
+<div id="page">              
+
+    <div class="clearer">&nbsp;</div>
+
+    <div class="clearer">&nbsp;</div>
+    <!-- END OF HEADER -->
+    <div id="content">
+    <script>
+    function hamburger(){
+        //alert("IN HAMBURGER");
+    }
+
+    TOGGLE = 0;
+
+    function show_menu(){
+
+        if(TOGGLE == 0) { 
+	    //SHOW BOX
+	    TOGGLE = 1;
+	    $('#hamburger_box').css('display', 'inline');
+	}
+	else { 
+	    //HIDE BOX
+	    TOGGLE = 0; 
+	    $('#hamburger_box').css('display', 'none');
+	}
+
+        //alert("in menu");
+    }
+
+    function dashboard(){
+//        alert(window.location.host);
+//	window.location.href = window.location.host+'/moodle';
+	//window.location = <?php $CFG->wwwroot; ?>;
+        window.location.href = "http://"+window.location.host+"/moodle";
+
+    }
+    
+    </script>
+
+    <style>
+#hamburger_box {
+    height: 400px;
+    width: 400px;
+    background-color: #3E3C3D;
+    text-align: left;
+    
+         float: right;
+}
+
+    ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  /*-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);*/
+}
+ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: 0px;
+  position: relative;
+  padding: 0px;
+  background: #006699;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+ul li:hover {
+  background: #555;
+  color: #fff;
+}
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+ul li ul li:hover { background: #666; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+#log_btn {
+    float: left; 
+    border-radius: 25px; 
+    background-color: #FF9900; 
+    width: 80px;
+    border: 2px solid #99CC99;     
+}
+#uname {
+    float: left;
+}
+    </style>
+

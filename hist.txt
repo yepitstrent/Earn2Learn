@@ -1,0 +1,619 @@
+    1  sudo apt-get update
+    2  sudo apt-get install php5 apache2 libapache2-mod-php5 mysql-server php5-mysql
+    3  sudo service apache2 restart
+    4  mysql_secure_installation
+    5  mysql -u root -p
+    6  ls
+    7  cp moodle_1.5.4_MOD.zip /var/www/html/moodle.zip
+    8  sudo cp moodle_1.5.4_MOD.zip /var/www/html/moodle.zip
+    9  cd /var/www/
+   10  ls
+   11  chmod -r 777 html/
+   12  sudo chmod -r 777 html/
+   13  cd html/
+   14  ls
+   15  cd ..
+   16  ls
+   17  chmod -R 777 html/
+   18  sudo chmod -R 777 html/
+   19  ls
+   20  cd html/
+   21  ls
+   22  unzip moodle.zip 
+   23  sudo apt-get install unzip
+   24  unzip moodle.zip 
+   25  ls
+   26  mysql -u root -p
+   27  sudo apt-get install graphviz aspell php5-pspell php5-curl php5-gd php5-intl php5-mysql php5-xmlrpc php5-ldap
+   28  sudo service apache2 restart
+   29  ls
+   30  sudo chmod -R 777 moodle
+   31  ls
+   32  cd moodle
+   33  ls
+   34  cd theme/
+   35  ls
+   36  cd standardwhite/
+   37  ls
+   38  sudo apt-get install vim-gtk
+   39  gvim footer.html 
+   40  ls
+   41  cd ..
+   42  ls
+   43  gvim index.php 
+   44  ls
+   45  cd ..
+   46  ls
+   47  gvim config.php 
+   48  gvim index.php 
+   49  cd course/
+   50  ls
+   51  cd ..
+   52  ls
+   53  cd blocks/
+   54  ls
+   55  cd login/
+   56  ls
+   57  gvim block_login.php 
+   58  ls
+   59  cd ..
+   60  ls
+   61  cd login/
+   62  ls
+   63  gvim index.php 
+   64  ls
+   65  cd ..
+   66  cd
+   67  ls
+   68  cp EARNtoLEARN_LOGIN_files.zip /var/www/html/moodle/E2L_login.zip
+   69  cd /var/www/html/moodle
+   70  ls
+   71  unzip E2L_login.zip 
+   72  ls
+   73  sudo chmod -R 777 EARNtoLEARN_LOGIN_files/
+   74  ls
+   75  cd EARNtoLEARN_LOGIN_files/
+   76  ls
+   77  cd ..
+   78  ls
+   79  cd login/
+   80  ls
+   81  cd ../
+   82  ls
+   83  cd EARNtoLEARN_LOGIN_files/
+   84  ls
+   85  cd ..
+   86  ls
+   87  gvim index.php 
+   88  mysql -u root -p
+   89  ls
+   90  cd ..
+   91  grep -R 'function print_footer' moodle/
+   92  sudo grep -R 'function print_footer' moodle/
+   93  ls
+   94  cd moodle
+   95  ls
+   96  mkdir dashboard
+   97  ls
+   98  sudo chmod -R 777 dashboard/
+   99  cd dashboard/
+  100  ls
+  101  touch index.php
+  102  mysql -u root -p
+  103  logout
+  104  ls
+  105  cp EARNtoLEARN_DASHBOARD_files.zip /var/www/html/moodle
+  106  cd /var/www/html/moodle
+  107  ls
+  108  unzip EARNtoLEARN_DASHBOARD_files.zip 
+  109  ls
+  110  sudo chmod -R 777 EARNtoLEARN_DASHBOARD_files
+  111  ls
+  112  gvim index.php 
+  113  ls
+  114  cd theme/
+  115  ls
+  116  cd standardwhite/
+  117  ls
+  118  gvim styles.php 
+  119  ls
+  120  cd ../../../
+  121  cd moodle
+  122  ls
+  123  mkdir lessons
+  124  ls
+  125  chmod -R 777 lessons
+  126  ls
+  127  cd lessons/
+  128  ls
+  129  touch index.php
+  130  ls
+  131  cd ..
+  132  ls
+  133  mysql -u root -p
+  134  logouty
+  135  logout
+  136  ls
+  137  cd /var/www/html/
+  138  ls
+  139  cd moodle
+  140  ls
+  141  cd theme/
+  142  ls
+  143  cd standardwhite/
+  144  ls
+  145  gvim header.html 
+  146  ls
+  147  cd ../../
+  148  ls
+  149  mkdir resources
+  150  ls
+  151  mysql -u root -p
+  152  ls
+  153  mysql -u root -p
+  154  exit
+  155  cd /var/www/html/moodle/lessons/
+  156  ls
+  157  gvim -p *.php
+  158  mysql -u root -p
+  159  cd
+  160  ls
+  161  cp resources.zip /var/www/html/moodle
+  162  ls /var/www/html/moodle
+  163  cd /var/www/html/moodle
+  164  ls
+  165  cd resources/
+  166  ls
+  167  cd ..
+  168  unzip resources.zip 
+  169  cd resources/
+  170  ls
+  171  cd ../../
+  172  sudo grep -Ril "function require_login" /var/www/html/moodle/
+  173  mysql -u root -p
+  174  cd moodle/resources/
+  175  ls
+  176  cd dashboard/
+  177  ls
+  178  cp dashboard_task_icon.png task.png
+  179  ls
+  180  cp droppedImage.png mail.png
+  181  mysql -u root -p
+  182  cd ../../../
+  183  cd moodle/mod/lesson/
+  184  ls
+  185  cd db
+  186  ls
+  187  gvim -p mysql.*
+  188  cd ../../../
+  189  cd ../
+  190  find /var/www/html/moodle/ -name mod.php
+  191  sudo find /var/www/html/moodle/ -name mod.php
+  192  logout
+  193  ls
+  194  cd /var/www/html/moodle
+  195  ls
+  196  gvim mod/lesson/view.php 
+  197  logout
+  198  cd /var/www/html/moodle/
+  199  cd lessons/
+  200  ls
+  201  gvim index.php 
+  202  ls
+  203  cd ..
+  204  ls
+  205  cd resources/
+  206  ls
+  207  cd dashboard/
+  208  ls
+  209  cp logo.png ../../mod/lesson/logo.png
+  210  cd ../../
+  211  cd mod/lesson/
+  212  ls
+  213  cd ..
+  214  ls
+  215  cd ..
+  216  ls
+  217  cd admin/
+  218  ls
+  219  cd ..
+  220  ls
+  221  cd auth/
+  222  ls
+  223  cd ..
+  224  ls
+  225  cd lib/
+  226  ls
+  227  cd editor/
+  228  ls
+  229  gvim htmlarea.php 
+  230  ls
+  231  logout
+  232  cd /var/www/html/moodle
+  233  ls
+  234  cd lib/editor/
+  235  ls
+  236  gvim htmlarea_bak.php 
+  237  ls
+  238  cd ..
+  239  ls
+  240  mysql -u root -p
+  241  cd ../
+  242  ls
+  243  cd mod/lesson/
+  244  ls
+  245  gvim view.php 
+  246  mysql -u root -p
+  247  logout
+  248  cd /var/www/html/moodle/mod/lesson/
+  249  gvim view.php 
+  250  cd ../../
+  251  cd ../
+  252  ls
+  253  sudo apt-get install git
+  254  git init
+  255  git commit -m "first commit"
+  256  git status 
+  257  git remote add origin https://github.com/trent-wagic/Earn2Learn-Moodle-1.5.git
+  258  git push -u origin master
+  259  git add *
+  260  cd moodle
+  261  ls
+  262  sudo chmod config.php 
+  263  sudo chmod 777 config.php 
+  264  ls
+  265  cd ../
+  266  ls
+  267  git add *
+  268  ls
+  269  sudo chmod -R 777 moodledata/
+  270  git add *
+  271  git commit -m "another commit"
+  272  git remote add origin https://github.com/trent-wagic/Earn2Learn-Moodle-1.5.git
+  273  git push -u origin master
+  274  ls
+  275  mysql -u root -p
+  276  logout
+  277  ls
+  278  cd /var/www/html/moodle
+  279  ls
+  280  cd mod/lesson/
+  281  gvim lesson.php 
+  282  cd ../../
+  283  ls
+  284  cp -R resourcei/* mod/
+  285  cp -r resources/ /var/www/html/moodle/mod/
+  286  mysql -u root -p
+  287  cd
+  288  ls
+  289  cp flat_files.zip /var/www/html/moodle/resources/flat_files.zip
+  290  cd /var/www/html/moodle/resources/
+  291  ls
+  292  rm flat_files.zip 
+  293  cd
+  294  cp flat_files.zip /var/www/html/moodle/resources/dashboard/flat_files.zip
+  295  cd /var/www/html/moodle/resources/dashboard/
+  296  ls
+  297  unzip flat_files.zip 
+  298  ls
+  299  cd flat_files/
+  300  ls
+  301  cp *.png ../
+  302  ls ../
+  303  cd
+  304  ls
+  305  cp SVGs.zip /var/www/html/moodle/resources/dashboard/SVGs.zip
+  306  cd /var/www/html/moodle/resources/dashboard/
+  307  ls~
+  308  ls
+  309  unzip SVGs.zip 
+  310  ls
+  311  cd SVGs/
+  312  cp *.svg ../
+  313  cd ../
+  314  ls
+  315  mysql -u root -p
+  316  cd ../../../
+  317  cd moodle
+  318  logout
+  319  cd /var/www/html/moodle/mod/lesson/
+  320  ls -a
+  321  rm .view.php.swp 
+  322  gvim view.php 
+  323  cd /var/www/html/moodle/mod/lesson/
+  324  rm .view.php.swp 
+  325  gvim view.php 
+  326  cd ../../
+  327  cd lessons/
+  328  ls
+  329  ls -a
+  330  rm .*.*.swp
+  331  mysql -u root -p
+  332  cd ../../
+  333  cd moodle/
+  334  ls
+  335  cd ..
+  336  ls
+  337  cd uploads/
+  338  ls
+  339  cd ../
+  340  cd moodle/
+  341  ls
+  342  cd resources/
+  343  ls
+  344  cd dashboard/
+  345  ls
+  346  cd ../../
+  347  ls
+  348  ls -a
+  349  rm .index.php.swp 
+  350  mysql -u root -p
+  351  logout
+  352  cd /var/www/html/moodle
+  353  ls
+  354  gvim index.php 
+  355  ls
+  356  chmod -R 777 resources
+  357  ls
+  358  chmod -R 777 tasks
+  359  ls
+  360  cd ..
+  361  ls -a
+  362  git add *
+  363  git status
+  364  git commit -a
+  365  git push
+  366  git add *
+  367  git --ignor-removal add *
+  368  git --ignore-removal add *
+  369  git add * --ignore-removal
+  370  sudo git add * --ignore-removal
+  371  git commit
+  372  git commit -a
+  373  git status
+  374  git push
+  375  git commit -a
+  376  sudo git commit -a
+  377  ls -a
+  378  git push
+  379  git commit -m "Tuesday Morning: Tasks"
+  380  git push
+  381  touch robots.txt
+  382  gvim robots.txt 
+  383  cd moodle/resources/
+  384  ls
+  385  cd dashboard/
+  386  ls
+  387  sudo apt-get install firefox
+  388  ls
+  389  firefox task.png
+  390  mysql -u root -p
+  391  logout
+  392  cd /var/www/html/moodle
+  393  cd mod/lesson/
+  394  ls
+  395  cd action/
+  396  ls
+  397  gvim addpage.php 
+  398  mysql -u root -p
+  399  cd ../../../
+  400  grep -R "function p" /var/www/html/moodle
+  401  sudo grep -R "function p" /var/www/html/moodle
+  402  sudo grep -R "function p(" /var/www/html/moodle
+  403  cd mod/lesson/
+  404  ls
+  405  touch test.php
+  406  logout
+  407  cd /var/www/html/moodle/mod/lesson/
+  408  ls
+  409  gvim lesson.php 
+  410  sudo grep -R "function insert_record(" /var/www/html/moodle
+  411  mysql -u root -p
+  412  cd ../../
+  413  cd ..
+  414  git add *
+  415  git add -A
+  416  sudo git add -A
+  417  sudo git commit -m "Youtube Insert For Admin"
+  418  sudo git push
+  419  mysql -u root -p
+  420  sudo git add *
+  421  sudo git add -A
+  422  sudo git commit -m "Youtube add/edit Working"
+  423  git push
+  424  mysql -u root -p
+  425  logout
+  426  cd /var/www/html/moodle
+  427  cd ../
+  428  cd moodle
+  429  ls -a
+  430  rm -R .*.*.swp /var/www/html/moodle/
+  431  ls -a
+  432  ls
+  433  cd ..
+  434  ls
+  435  cd ..
+  436  ls
+  437  cd html/
+  438  git pull
+  439  ls
+  440  cd moodledata/
+  441  cd ..
+  442  ls -a
+  443  git checkout HEAD
+  444  ls
+  445  git checkout *
+  446  ls
+  447  git checkout master
+  448  ls -a
+  449  git reset --hard
+  450  ls -a
+  451  cd moodle
+  452  ls
+  453  cd ..
+  454  chmod -R 777 moodle/
+  455  ls
+  456  cd moodle
+  457  ls
+  458  cd login/
+  459  ls
+  460  gvim index
+  461  gvim index.php 
+  462  logout
+  463  cd /var/www/html/moodle
+  464  ls
+  465  cd ..
+  466  sudo git add -A
+  467  git commit -m "Friday Morning Commit"
+  468  sudo git commit -m "Friday Morning Commit"
+  469  git push
+  470  cd moodle/mod/
+  471  ls
+  472  cd assignment/
+  473  ls
+  474  gvim index.php 
+  475  logout
+  476  top
+  477  cd /var/www/html/moodle/mod/assignment
+  478  gvim index.php 
+  479  cd ../../../
+  480  ls
+  481  cd uploads/
+  482  ls
+  483  cp rendro-easy-pie-chart-2.1.6-8-g05a1bbf.zip /var/www/html/moodle/pie.zip
+  484  cd ..
+  485  cd moodle
+  486  ls
+  487  mv pie.zip resources/pie.zip
+  488  ls
+  489  cd resources/
+  490  ls
+  491  mkdir charts
+  492  ls
+  493  chmod -R 777 charts/
+  494  ls
+  495  mv pie.zip charts/pie.zip
+  496  cd charts/
+  497  ls
+  498  unzip pie.zip 
+  499  ls
+  500  chmod -R 777 rendro-easy-pie-chart-05a1bbf/
+  501  ls
+  502  cd rendro-easy-pie-chart-05a1bbf/
+  503  ls
+  504  cd demo/
+  505  ls
+  506  firefox index.html 
+  507  ls
+  508  gvim index.html 
+  509  cd ../../
+  510  ls
+  511  mv rendro-easy-pie-chart-05a1bbf/ rendro/
+  512  ls
+  513  cd rendro/
+  514  ls
+  515  cd dist/
+  516  ls
+  517  cd ..
+  518  ls
+  519  cd demo/
+  520  ls
+  521  ls -a
+  522  rm .index.html.swp 
+  523  ls
+  524  cd ..
+  525  ls 
+  526  cd dist/
+  527  ls
+  528  cd ../../../../
+  529  cd ../
+  530  sudo git add -A
+  531  sudo git commit -m "Rendro Pie Charts Working, Updated Headers src Locations"
+  532  git push
+  533  cd moodle/resources/dashboard/
+  534  ls
+  535  cd ../../../
+  536  ls
+  537  cd uploads/
+  538  ls
+  539  cp dashboard_task_icon.svg ../moodle/resources/dashboard/task.svg
+  540  cd ../moodle/
+  541  cd resources/dashboard/
+  542  ls
+  543  cd ../../
+  544  cd ../
+  545  ls
+  546  cd uploads/
+  547  ls
+  548  mv Task\ Buttons.zip Task_buttons.zip
+  549  ls
+  550  cp Task_buttons.zip ../moodle/resources/dashboard/task_btn.zip
+  551  cd ../moodle/resources/dashboard/
+  552  ls
+  553  unzip task_btn.zip 
+  554  ls
+  555  mv Task\ Buttons/ Task_Btn/
+  556  ls
+  557  cp Task_Btn/* /
+  558  sudo cp Task_Btn/* /
+  559  ls
+  560  sudo cp Task_Btn/* /var/www/html/moodle/resources/dashboard/
+  561  ls
+  562  cd ../
+  563  sudo chmod -R 777 dashboard/
+  564  ls
+  565  cd dashboard/
+  566  ls
+  567  cd ../../../
+  568  sudo git add -A
+  569  sudo git commit -m "Friday Evening: Task Layout, buttons, chart"
+  570  git push
+  571  logout
+  572  cd /var/www/html/moodle/
+  573  ls
+  574  cd tasks/
+  575  ls
+  576  gvim index.php 
+  577  cd ../../
+  578  ls
+  579  grep -R "function require_login" /var/www/html/moodle/
+  580  ls
+  581  cd uploads/
+  582  ls
+  583  cp hamburger.css /var/www/html/moodle/theme/standardwhite/hamburger.css
+  584  cp hamburger.js /var/www/html/moodle/theme/standardwhite/hamburger.js
+  585  cd /var/www/html/moodle/theme/standardwhite/
+  586  ls
+  587  rm hamburger.css
+  588  rm hamburger.js 
+  589  ls
+  590  cd ../../../
+  591  cd uploads/
+  592  cd ../moodle/
+  593  ls
+  594  mkdir js
+  595  ls
+  596  mkdir css
+  597  ls
+  598  cd ..
+  599  cd uploads/
+  600  cp hamburger.js /var/www/html/moodle/js/hamburger.js
+  601  cp hamburger.css /var/www/html/moodle/js/hamburger.css
+  602  ls
+  603  cd ../moodle
+  604  ls
+  605  logout
+  606  cd /var/www/html/moodle/
+  607  cd theme/standardwhite/
+  608  gvim header.html 
+  609  logout
+  610  cd /var/www/html/moodle/theme/standardwhite/
+  611  gvim header.html 
+  612  cd ../../
+  613  cd ../
+  614  grep -R "menuavailableyear" /var/www/html/moodle/
+  615  cd moodle
+  616  ls
+  617  history 
+  618  cd ..
+  619  history >> hist.txt
